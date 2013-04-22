@@ -1,0 +1,56 @@
+{
+	"name":"Recup",
+	"description":"Module description",
+	"author":
+	{
+		"name":"Arnaud Babol - Fedonono",
+		"website":"http:\/\/babol.me"
+	},
+
+	"permissions": {
+		"view": {"default" : true, "description": "View the teleport screen." },
+		"canValidate": {"default" : false, "description": "Valider la Recup." },
+		"canRefund": {"default" : false, "description": "Rembourser la Recup." },
+		"canEdit": {"default" : false, "description": "Editer la Recup." },
+		"canViewAdmin": {"default" : false, "description": "View the recup list admin page." }
+	},
+
+	"roles": {
+		"view": {
+			"description": "View the recup module.",
+
+			"permissions": {
+				"view": true
+			}
+		},
+
+		"manage": {
+			"description": "Manage the recup module. <font style='color:red;'>Admin-tool</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"canViewAdmin": true,
+				"canRefund": true,
+				"canValidate": true,
+				"canEdit": true
+			}
+		}
+	},
+
+	"admin": [
+		{
+			"text": "Store",
+			"icon": "share",
+			"links": [
+				{
+					"text": "Recup List",
+					"icon": "pointer",
+					"controller": "admin",
+					"requirePermission": "canViewAdmin"
+				}
+			]
+		}
+	],
+
+	"enabled":true
+}

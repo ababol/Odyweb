@@ -1,0 +1,12 @@
+#recup {
+	margin: 0 auto;
+	color: white;
+}
+
+.form_fill {
+	width: 50%;
+}
+
+#upload_error {
+	color: red;
+}
